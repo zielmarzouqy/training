@@ -17,7 +17,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.training.training.controller.MyController;
-
+// add comments ...
 @RunWith(SpringJUnit4ClassRunner.class)
 //@WebAppConfiguration
 @ContextConfiguration(locations = { "classpath:/spring/applicationContext.xml"})
