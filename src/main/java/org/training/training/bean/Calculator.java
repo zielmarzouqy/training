@@ -1,4 +1,6 @@
 package org.training.training.bean;
+
+// add comment
 public class Calculator {
  
   public double squareRoot(int x)throws IllegalArgumentException{
