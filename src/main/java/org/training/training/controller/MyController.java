@@ -1,10 +1,12 @@
 package org.training.training.controller;
 
 import org.apache.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.training.training.service.ICommande;
 
 @Controller
 @RequestMapping("/myController")
@@ -12,8 +14,8 @@ public class MyController {
 	
     static Logger logger = Logger.getLogger(MyController.class);
 
-//   @Autowired
-//   ICommande commandeImpl;
+   @Autowired
+   ICommande commandeImpl;
 //   
 //   @Autowired
 //   ICommande commandeImpl2;
@@ -21,7 +23,7 @@ public class MyController {
    @GetMapping("/index")
    public String index(Model model) {
       model.addAttribute("message", "Hello Spring MVC 5!");
-//      commandeImpl.showCommande();
+      commandeImpl.showCommande();
       logger.debug("This is debug message");
       logger.info("This is info message");
       

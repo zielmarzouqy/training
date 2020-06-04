@@ -1,5 +1,6 @@
 package org.training.training.service;
 
+import org.springframework.stereotype.Service;
 import org.training.training.model.Article;
 
 

@@ -2,6 +2,9 @@ package org.training.training.model;
 
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Commande {
 	private String num;
 	private String date;

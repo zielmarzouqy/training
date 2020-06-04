@@ -17,8 +17,14 @@
 	    
 <!-- 	<import resource="appconfig-mvc.xml"/> -->
 <!-- 	<beans profile="dev"> -->
-		<bean id="commandeImpl" class="org.training.training.service.ICommandeImpl" />
-		<bean id="commandeImpl2" class="org.training.training.service.ICommandeImpl" />
+
+<!-- 		<bean id="commande" class="org.training.training.model.Commande" /> -->
+
+<!-- 		<bean id="commandeImpl" class="org.training.training.service.ICommandeImpl"> -->
+<!-- 			<property name="commande" ref="commande"></property> -->
+<!-- 		</bean> -->
+		
+<!-- 		<bean id="commandeImpl2" class="org.training.training.service.ICommandeImpl" /> -->
 		
 <!-- 	</beans> -->
 <!-- 	<bean id="myController" class="org.training.training.controller.MyController" /> -->

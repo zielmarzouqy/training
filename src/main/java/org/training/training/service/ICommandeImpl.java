@@ -3,11 +3,15 @@ package org.training.training.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.training.training.model.Article;
 import org.training.training.model.Commande;
 
+@Service
 public class ICommandeImpl implements ICommande {
 	
+	@Autowired
 	private Commande commande;
 	
 	@Override
@@ -61,6 +65,7 @@ public class ICommandeImpl implements ICommande {
 	
 	@Override
 	public void showCommande() {
+		System.out.println(commande.toString());
 		System.out.println("show commande");
 	//	System.out.println(this.commande.toString());
 	}
@@ -76,12 +81,12 @@ public class ICommandeImpl implements ICommande {
 //		return new Commande();
 //	}
 
-	public Commande getCommande() {
-		return commande;
-	}
-
-	public void setCommande(Commande commande) {
-		this.commande = commande;
-	}
+//	public Commande getCommande() {
+//		return commande;
+//	}
+//
+//	public void setCommande(Commande commande) {
+//		this.commande = commande;
+//	}
 	
 }
