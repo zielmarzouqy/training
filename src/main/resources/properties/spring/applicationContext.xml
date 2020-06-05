@@ -14,6 +14,14 @@
 
 	<mvc:annotation-driven />
 	<context:component-scan base-package="org.training.*"/>
+	<!-- vous devez ajouter /training/target/properties au classpath : java build path + link source -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	
+	<bean id="connection" class="org.training.training.dao.Connection">
+		<property name="url" value="${midoperationsDB.url}"/>
+		<property name="username" value="${midoperationsDB.username}"/>
+		<property name="password" value="${midoperationsDB.password}"/>
+	</bean>
 	    
 <!-- 	<import resource="appconfig-mvc.xml"/> -->
 <!-- 	<beans profile="dev"> -->
