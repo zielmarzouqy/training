@@ -5,8 +5,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.training.training.dao.Connection;
 import org.training.training.service.ICommande;
 
 @Controller
@@ -18,17 +18,30 @@ public class MyController {
    @Autowired
    ICommande commandeImpl;
    
-   @Autowired
-   Connection connection;
-//   
+//   @Autowired
+//   Connection connection;
+   
+//   @Autowired
+//   MyBean myBean;
+   
+   @ModelAttribute("myString")
+   public String getString() {
+	   return "myString .. 1";
+   }
+
 //   @Autowired
 //   ICommande commandeImpl2;
    
    @GetMapping("/index")
    public String index(Model model) {
-      model.addAttribute("message", "Hello Spring MVC 5!");
-      commandeImpl.showCommande();
-      System.out.println(connection);
+//	   myBean.setI(6000);
+	  model.addAttribute("my", "my my");
+//      model.addAttribute("message", "Hello Spring MVC 5!");
+      String s = commandeImpl.showCommande();
+      model.addAttribute("message", s);
+
+      System.out.println(s);
+//      System.out.println(connection);
       logger.debug("This is debug message");
       logger.info("This is info message");
       

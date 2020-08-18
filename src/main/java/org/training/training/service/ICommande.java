@@ -10,5 +10,5 @@ public interface ICommande {
 //	Commande supprimerArticle(Article article);
 //	Commande modifierCommande(Commande commande);
 	void ajouterArticle(Article article, int quantite);
-	void showCommande();
+	String showCommande();
 }

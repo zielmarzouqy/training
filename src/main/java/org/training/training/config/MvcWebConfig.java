@@ -5,6 +5,7 @@
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.context.annotation.ComponentScan;
 //import org.springframework.context.annotation.Configuration;
+//import org.springframework.context.annotation.ImportResource;
 //import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 //import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 //import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -14,15 +15,16 @@
 //
 //@Configuration
 //@EnableWebMvc
+//@ImportResource({ "file:src/main/resources/properties/spring/appconfig-mvc.xml" })
 //@ComponentScan("org.training.*")
 //public class MvcWebConfig implements WebMvcConfigurer {
 //
-//   @Autowired
-//   private ApplicationContext applicationContext;
+//	@Autowired
+//	private ApplicationContext applicationContext;
 //
-//   /*
-//    * STEP 1 - Create SpringResourceTemplateResolver
-//    * */
+//	/*
+//	 * STEP 1 - Create SpringResourceTemplateResolver
+//	 */
 //   @Bean
 //   public SpringResourceTemplateResolver templateResolver() {
 //      SpringResourceTemplateResolver templateResolver = new SpringResourceTemplateResolver();
@@ -32,9 +34,9 @@
 //      return templateResolver;
 //   }
 //
-//   /*
-//    * STEP 2 - Create SpringTemplateEngine
-//    * */
+//	/*
+//	 * STEP 2 - Create SpringTemplateEngine
+//	 */
 //   @Bean
 //   public SpringTemplateEngine templateEngine() {
 //      SpringTemplateEngine templateEngine = new SpringTemplateEngine();
@@ -43,9 +45,9 @@
 //      return templateEngine;
 //   }
 //
-//   /*
-//    * STEP 3 - Register ThymeleafViewResolver
-//    * */
+//	/*
+//	 * STEP 3 - Register ThymeleafViewResolver
+//	 */
 //   @Override
 //   public void configureViewResolvers(ViewResolverRegistry registry) {
 //      ThymeleafViewResolver resolver = new ThymeleafViewResolver();

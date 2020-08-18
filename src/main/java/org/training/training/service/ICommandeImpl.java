@@ -64,9 +64,10 @@ public class ICommandeImpl implements ICommande {
 	}
 	
 	@Override
-	public void showCommande() {
+	public String showCommande() {
 		System.out.println(commande.toString());
 		System.out.println("show commande");
+		return "show commande";
 	//	System.out.println(this.commande.toString());
 	}
 //

@@ -4,11 +4,15 @@
 //
 //public class MvcWebApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 //
+//	/* Le getRootConfigClasses()configurera le ContextLoaderListeneret est en fait facultatif 
+//	   (vous pouvez retourner null ou un tableau vide). */
 //   @Override
 //   protected Class<?>[] getRootConfigClasses() {
-//      return null;
+////      return new Class<?>[] { CoreConfig.class };
+//	      return null;
 //   }
 //
+//   /* Le getServletConfigClasses()configurera le DispatcherServlet(et est obligatoire). */
 //   @Override
 //   protected Class<?>[] getServletConfigClasses() {
 //      return new Class[] { MvcWebConfig.class };

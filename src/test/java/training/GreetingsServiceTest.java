@@ -14,26 +14,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.training.training.bean.AppService;
-import org.training.training.bean.AppServiceImpl;
 import org.training.training.bean.GreetingsService;
-import org.training.training.bean.GreetingsServiceImpl;
 import org.training.training.bean.UserService;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "classpath:/spring/applicationContext.xml" })
 public class GreetingsServiceTest {
-	
 	@Mock
     private UserService userService; // this class will be mocked
    
-	//@Autowired
+	@Autowired
     @Spy
-    private AppService appService = new AppServiceImpl(); // this class WON'T be mocked
+    private AppService appService; // = new AppServiceImpl(); ou bien on utilise @Autowired// this class WON'T be mocked
 
-//	@Autowired
+	@Autowired
     @InjectMocks
-    GreetingsService greetingsService = new GreetingsServiceImpl();
+    GreetingsService greetingsService; //= new GreetingsServiceImpl(); ou bien on utilise @Autowired
 	
     @Before
     public void setUp() {
